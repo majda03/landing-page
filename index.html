@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="Personal training & online coaching — built for conversion." />
+    <title>Apex Coach — Personal Training</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Top progress bar -->
+    <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+    <!-- NAV -->
+    <header class="nav">
+  <div class="nav__inner">
+    <a class="logo" href="#top" aria-label="Apex Coach Home">
+      <span class="logo__mark"></span>
+      <span class="logo__text">Apex<span class="logo__dim">Coach</span></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#programs">Programs</a>
+      <a href="#results">Results</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button
+        class="btn btn--ghost"
+        id="themeBtn"
+        type="button"
+        aria-label="Toggle theme"
+      >
+        <span id="themeIcon">🌙</span>
+      </button>
+
+      <!-- OVDJE NEMA VIŠE id="openBooking", SAD JE data-open-booking -->
+      <button class="btn btn--primary" data-open-booking type="button">
+        Book a Session
+      </button>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Open menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel">
+      <div class="drawer__top">
+        <span class="drawer__title">Menu</span>
+        <button class="btn btn--ghost" id="closeDrawer" type="button">✕</button>
+      </div>
+
+      <a class="drawer__link" href="#programs">Programs</a>
+      <a class="drawer__link" href="#results">Results</a>
+      <a class="drawer__link" href="#testimonials">Reviews</a>
+      <a class="drawer__link" href="#faq">FAQ</a>
+
+      <!-- I OVDJE UMJESTO id="openBooking2" → data-open-booking -->
+      <button
+        class="btn btn--primary drawer__cta"
+        data-open-booking
+        type="button"
+      >
+        Book a Session
+      </button>
+    </div>
+  </div>
+</header>
+    <!-- HERO -->
+    <main id="top">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy reveal">
+            <div class="pill pill--dev">
+           Built with HTML • CSS • JS (no frameworks)
+          </div>
+            <div class="pill">
+              <span class="dot"></span>
+              1:1 coaching • 12-week transformations • Sarajevo + Online
+            </div>
+
+            <h1 class="hero__title">
+              Train with a plan.
+              <span class="gradient">Build a body</span>
+              you can maintain.
+            </h1>
+
+            <p class="hero__subtitle">
+              Evidence-based training, nutrition guidance, and accountability.
+              Designed for busy people who want real results — without burnout.
+            </p>
+
+           <div class="hero__cta">
+  <button class="btn btn--primary btn--lg" data-open-booking type="button">
+    Book a Free Intro Call
+  </button>
+  <a class="btn btn--ghost btn--lg" href="#programs">See Programs</a>
+</div>
+
+            <div class="hero__stats">
+              <div class="stat">
+                <div class="stat__num">+120</div>
+                <div class="stat__label">clients coached</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num">4.9★</div>
+                <div class="stat__label">average rating</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num">12</div>
+                <div class="stat__label">weeks to transform</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal">
+            <div class="visualCard">
+              <div class="visualCard__top">
+                <span class="badge">Transformation Plan</span>
+                <span class="chip">Today</span>
+              </div>
+
+              <div class="visualCard__ring" aria-hidden="true">
+                <div class="ring">
+                  <div class="ring__inner">
+                    <div class="ring__value">78%</div>
+                    <div class="ring__label">Consistency</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visualCard__list">
+                <div class="row">
+                  <span class="row__key">Strength</span>
+                  <span class="row__bar"><i style="width: 82%"></i></span>
+                </div>
+                <div class="row">
+                  <span class="row__key">Mobility</span>
+                  <span class="row__bar"><i style="width: 68%"></i></span>
+                </div>
+                <div class="row">
+                  <span class="row__key">Nutrition</span>
+                  <span class="row__bar"><i style="width: 74%"></i></span>
+                </div>
+              </div>
+
+              <div class="visualCard__note">
+                “Small habits → massive compounding.”
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__bg" aria-hidden="true">
+          <div class="blob blob--a"></div>
+          <div class="blob blob--b"></div>
+        </div>
+      </section>
+<section class="section">
+  <div class="container grid2 about">
+    <div class="about__copy">
+      <h2 class="h2">Hi, I’m your coach.</h2>
+      <p class="muted">
+        8+ years of lifting, 120+ clients coached, opsjednut( a ) time-efficient treninzima
+        i programima koji se stvarno mogu izdržati, ne samo preživjeti.
+      </p>
+      <ul class="list list--plain">
+        <li>🏋️‍♀️ Evidence-based trening</li>
+        <li>🥗 Fleksibilna ishrana (bez “čistog” fanatizma)</li>
+        <li>📊 Tracking i jasne metrike napretka</li>
+      </ul>
+    </div>
+    <div class="about__visual">
+      <div class="about__card">
+        <span class="chip">Coach</span>
+        <h3 class="h3">Apex Coach</h3>
+        <p class="muted small">
+          “We don’t chase motivation. Gradimo sistem koji radi čak i kad se tebi ne da.”
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- TRUST -->
+      <section class="trust">
+        <div class="container trust__inner reveal">
+          <p class="trust__title">Trusted by people who want structure, not chaos.</p>
+          <div class="trust__logos">
+            <div class="logoBox">Strength</div>
+            <div class="logoBox">Nutrition</div>
+            <div class="logoBox">Mobility</div>
+            <div class="logoBox">Accountability</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRAMS -->
+      <section class="section" id="programs">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2">Programs built to convert effort into results</h2>
+            <p class="muted">
+              Choose your intensity. Every plan includes structure, tracking and real feedback.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card reveal">
+              <div class="card__top">
+                <h3 class="h3">Starter</h3>
+                <span class="price">149€ <span class="price__dim">/ month</span></span>
+              </div>
+              <ul class="list">
+                <li>Training plan (4 weeks)</li>
+                <li>Technique checklist</li>
+                <li>Weekly progress check</li>
+                <li>Email support</li>
+              </ul>
+              <button class="btn btn--ghost w100" data-plan="Starter">Choose Starter</button>
+            </article>
+
+            <article class="card card--featured reveal">
+              <div class="card__top">
+                <h3 class="h3">Pro Coaching</h3>
+                <span class="price">249€ <span class="price__dim">/ month</span></span>
+              </div>
+              <ul class="list">
+                <li>Custom training + nutrition</li>
+                <li>Weekly call (30 min)</li>
+                <li>Habit system + tracking</li>
+                <li>Priority chat support</li>
+              </ul>
+              <button class="btn btn--primary w100" data-plan="Pro Coaching">Choose Pro</button>
+              <div class="tag">Most popular</div>
+            </article>
+
+            <article class="card reveal">
+              <div class="card__top">
+                <h3 class="h3">Elite</h3>
+                <span class="price">399€ <span class="price__dim">/ month</span></span>
+              </div>
+              <ul class="list">
+                <li>2 calls / week</li>
+                <li>Full nutrition protocol</li>
+                <li>Video form review</li>
+                <li>Daily accountability</li>
+              </ul>
+              <button class="btn btn--ghost w100" data-plan="Elite">Choose Elite</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS -->
+      <section class="section section--alt" id="results">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2">Results that come from consistency</h2>
+            <p class="muted">No tricks — just a system you can follow.</p>
+          </div>
+
+          <div class="grid2">
+            <div class="panel reveal">
+              <h3 class="h3">What you get</h3>
+              <p class="muted">
+                A plan that fits your schedule, your habits and your energy. We optimize training and
+                nutrition so you don’t quit.
+              </p>
+              <div class="kpis">
+                <div class="kpi">
+                  <div class="kpi__n">3–5</div>
+                  <div class="kpi__t">sessions/week</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__n">10–20</div>
+                  <div class="kpi__t">min mobility/day</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__n">1</div>
+                  <div class="kpi__t">simple food system</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel--chart reveal">
+              <div class="chartHead">
+                <h3 class="h3">Progress tracker</h3>
+                <span class="chip">Demo</span>
+              </div>
+              <div class="chart" aria-hidden="true">
+                <span style="height: 35%"></span>
+                <span style="height: 55%"></span>
+                <span style="height: 48%"></span>
+                <span style="height: 72%"></span>
+                <span style="height: 82%"></span>
+                <span style="height: 90%"></span>
+              </div>
+              <p class="muted small">Weekly consistency trend (example).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2">Clients who stopped restarting every Monday</h2>
+            <p class="muted">Social proof matters. This is what “structure” feels like.</p>
+          </div>
+
+          <div class="quotes">
+            <figure class="quote reveal">
+              <blockquote>
+                “I finally have a plan I can follow. I’m stronger, leaner, and not obsessed with
+                perfection anymore.”
+              </blockquote>
+              <figcaption>— Amina, 12 weeks</figcaption>
+            </figure>
+
+            <figure class="quote reveal">
+              <blockquote>
+                “The accountability system is insane. I used to quit. Now I just… do the work.”
+              </blockquote>
+              <figcaption>— Lejla, busy schedule</figcaption>
+            </figure>
+
+            <figure class="quote reveal">
+              <blockquote>
+                “Nutrition became simple. Training became predictable. My body changed because my
+                habits changed.”
+              </blockquote>
+              <figcaption>— Sara, online coaching</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section--alt" id="faq">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2">FAQ</h2>
+            <p class="muted">Everything you need before booking.</p>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item reveal">
+              <summary>Do I need a gym?</summary>
+              <p class="muted">
+                No. You can do gym, home, or hybrid. The plan adapts to your equipment and schedule.
+              </p>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Is nutrition strict?</summary>
+              <p class="muted">
+                No crash diets. We set a simple structure you can repeat, and adjust based on your
+                progress.
+              </p>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>How fast will I see results?</summary>
+              <p class="muted">
+                Most clients feel stronger within 2–3 weeks. Visual changes typically show in 6–12 weeks
+                depending on consistency.
+              </p>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>What happens after I book?</summary>
+              <p class="muted">
+                You’ll get a short intake form and a free intro call. Then we build your plan and start
+                tracking.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="finalCta">
+        <div class="container finalCta__inner reveal">
+          <div>
+            <h2 class="h2">Ready to stop guessing?</h2>
+            <p class="muted">
+              Book a free intro call. I’ll tell you exactly what to do for the next 12 weeks.
+            </p>
+          </div>
+         <button class="btn btn--primary btn--lg" data-open-booking type="button">
+  Book Now
+</button>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container footer__inner">
+          <p>© 2025 Apex Coach. Built as a portfolio landing demo.</p>
+          <p class="footer__links">
+            <a href="#top">Back to top</a>
+            <span class="sep">•</span>
+            <a href="mailto:kapetanovicmajda10@gmail.com">Contact me</a>
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- BOOKING MODAL -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__backdrop" id="closeModal"></div>
+
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Booking form">
+        <div class="modal__top">
+          <h3 class="h3">Book a Free Intro Call</h3>
+          <button class="btn btn--ghost" id="closeModalBtn" type="button">✕</button>
+        </div>
+
+        <p class="muted small">
+          This is a front-end demo. Replace the email with yours when you use it in portfolio.
+        </p>
+
+        <form class="form" id="bookingForm">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@email.com" />
+          </label>
+
+          <label class="field">
+            <span>Goal</span>
+            <select name="goal" required>
+              <option value="" selected disabled>Select goal</option>
+              <option>Fat loss</option>
+              <option>Muscle gain</option>
+              <option>Strength</option>
+              <option>Recomposition</option>
+              <option>Mobility</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Tell me your schedule and current level..."></textarea>
+          </label>
+
+          <button class="btn btn--primary btn--lg w100" type="submit">Send Request</button>
+          <p class="muted small center" id="formMsg" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
