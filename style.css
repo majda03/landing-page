@@ -682,7 +682,7 @@ body.light .field input, body.light .field select, body.light .field textarea {
   }
 
 }
-/* FIX KPI BOXES ON MOBILE */
+/* FIX KPI text overflow on mobile */
 .kpi { min-width: 0; }
 
 .kpi__t{
@@ -692,16 +692,17 @@ body.light .field input, body.light .field select, body.light .field textarea {
   line-height: 1.15;
 }
 
-/* Na mobitelu da ne bude 3 u redu (preusko) */
+/* Na mobitelu ne držati 3 kolone (preusko) */
 @media (max-width: 520px){
   .kpis{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .kpis .kpi:last-child{
-    grid-column: span 2; /* treća kartica ide full širine */
+    grid-column: span 2; /* treći ide full width */
   }
   .kpi__t{
     font-size: 0.8rem;
   }
-    }
+}
+
 
